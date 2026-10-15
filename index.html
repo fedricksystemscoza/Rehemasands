@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rehema Sands Accommodation | Windermere Road, Gqeberha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#faf7f2; --sand-2:#f1eae0; --sand-3:#e8ded0;
+  --clay:#c1704f; --clay-dark:#a15a3d; --clay-light:#e0a688;
+  --ocean:#1c4a5e; --ocean-deep:#0d2b36; --ocean-light:#2d6a82;
+  --sun:#f2b13c; --sun-soft:#fce3a8;
+  --ink:#181818; --ink-soft:#5a5a5a; --paper:#ffffff;
+  --radius:20px; --radius-lg:28px; --radius-pill:999px;
+  --shadow-xs:0 2px 8px rgba(24,24,24,.04);
+  --shadow-sm:0 8px 24px -8px rgba(24,24,24,.10);
+  --shadow-md:0 16px 36px -12px rgba(13,43,54,.18);
+  --shadow-lg:0 28px 56px -18px rgba(13,43,54,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--sand);color:var(--ink);
+  line-height:1.6;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,.logo,.price,.est-num{
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-weight:700;line-height:1.1;letter-spacing:-.025em;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:56px 0}
+
+.bg-sand{background:var(--sand)}
+.bg-sand-2{background:var(--sand-2)}
+.bg-ocean{background:var(--ocean-deep);color:#e8f0f3}
+.bg-white{background:var(--paper)}
+
+/* ---------- section headers ---------- */
+.sec-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:24px}
+.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.5rem);font-weight:800;color:var(--ocean-deep)}
+.sec-head p{max-width:52ch;color:var(--ink-soft);font-size:1rem;margin-top:6px;grid-column:1}
+.sec-head .chip{
+  grid-column:2;grid-row:1 / span 2;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--sun-soft);color:var(--ocean-deep);
+  padding:8px 18px;border-radius:var(--radius-pill);
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:.78rem;
+  letter-spacing:.06em;text-transform:uppercase;
+  align-self:end;
+}
+.chip:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--clay)}
+.bg-ocean .sec-head h2{color:#fce3a8}
+.bg-ocean .sec-head p{color:#a9c5d1}
+.bg-ocean .chip{background:rgba(242,177,60,.15);color:var(--sun)}
+.bg-ocean .chip:before{background:var(--sun)}
+@media(max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .sec-head .chip{grid-column:1;grid-row:auto;justify-self:start;margin-top:4px}
+}
+
+/* ---------- NAV ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(250,247,242,.85);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(13,43,54,.08);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{
+  font-family:'DM Sans',sans-serif;font-weight:800;font-size:1.35rem;
+  letter-spacing:-.03em;color:var(--ocean-deep);
+  display:flex;align-items:center;gap:10px;
+}
+.logo .mark{
+  width:32px;height:32px;border-radius:10px;
+  background:linear-gradient(135deg,var(--clay),var(--sun));
+  display:grid;place-items:center;color:#fff;
+  font-family:'DM Sans',sans-serif;font-weight:800;font-size:.95rem;
+  box-shadow:0 4px 12px rgba(193,112,79,.35);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.logo:hover .mark{transform:rotate(-8deg) scale(1.08)}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav ul a{
+  font-weight:500;font-size:.92rem;color:var(--ocean-deep);
+  transition:color .2s;position:relative;padding:4px 0;
+}
+nav ul a:not(.cta):after{
+  content:'';position:absolute;bottom:-2px;left:0;
+  width:0;height:2px;background:var(--clay);
+  transition:width .3s cubic-bezier(.2,.8,.2,1);
+}
+nav ul a:not(.cta):hover:after{width:100%}
+nav ul a:hover{color:var(--clay)}
+nav .cta{
+  background:var(--ocean-deep);color:#fff;
+  padding:9px 22px;border-radius:var(--radius-pill);
+  font-weight:600;font-size:.88rem;
+  transition:all .3s cubic-bezier(.2,.8,.2,1);
+}
+nav .cta:hover{
+  background:var(--clay);transform:translateY(-2px);
+  box-shadow:0 10px 20px -8px rgba(193,112,79,.5);
+}
+#burger{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer;color:var(--ocean-deep);padding:6px}
+@media(max-width:860px){
+  #burger{display:block}
+  nav ul{
+    position:absolute;top:68px;left:0;right:0;background:var(--sand);
+    flex-direction:column;padding:22px 28px 30px;gap:16px;display:none;
+    border-bottom:1px solid rgba(13,43,54,.08);
+    align-items:flex-start;box-shadow:var(--shadow-md);
+  }
+  nav ul.open{display:flex}
+  nav ul a{font-size:1.02rem}
+  nav ul a.cta{align-self:stretch;text-align:center}
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  padding:110px 0 60px;
+  background:
+    radial-gradient(ellipse 80% 60% at 100% 0%,rgba(242,177,60,.14),transparent 60%),
+    radial-gradient(ellipse 70% 50% at 0% 100%,rgba(28,74,94,.08),transparent 60%),
+    var(--sand);
+  overflow:hidden;
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:56px;align-items:center;position:relative;z-index:2;
+}
+.hero-left{max-width:600px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--paper);border:1px solid rgba(13,43,54,.08);
+  padding:6px 16px 6px 8px;border-radius:var(--radius-pill);
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:.75rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ocean);
+  box-shadow:var(--shadow-xs);
+  opacity:0;animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) .1s forwards;
+}
+.eyebrow .dot{
+  width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--clay),var(--sun));
+  display:grid;place-items:center;color:#fff;font-size:.65rem;
+}
+.hero h1{
+  font-size:clamp(2.6rem,5.8vw,4.6rem);
+  font-weight:800;color:var(--ocean-deep);
+  line-height:1.02;letter-spacing:-.04em;
+  margin:18px 0 18px;
+}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{
+  display:block;transform:translateY(110%);
+  animation:up 1s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.hero h1 .line:nth-child(2) span{animation-delay:.12s}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--clay) 0%,var(--sun) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+@keyframes up{to{transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero p.sub{
+  font-size:1.05rem;color:var(--ink-soft);max-width:46ch;
+  margin-bottom:24px;
+  opacity:0;animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) .5s forwards;
+}
+.hero-stats{
+  display:flex;gap:32px;flex-wrap:wrap;
+  padding-top:22px;border-top:1px solid rgba(13,43,54,.1);
+  opacity:0;animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) .65s forwards;
+}
+.hero-stats .stat strong{
+  display:block;font-family:'DM Sans',sans-serif;
+  font-size:1.5rem;font-weight:800;color:var(--clay);line-height:1;
+}
+.hero-stats .stat span{
+  font-size:.78rem;color:var(--ink-soft);
+  text-transform:uppercase;letter-spacing:.06em;
+  font-weight:500;margin-top:4px;display:block;
+}
+.hero-visual{
+  position:relative;height:500px;
+  opacity:0;animation:fadeUp .9s cubic-bezier(.2,.8,.2,1) .3s forwards;
+}
+.hero-visual .frame{
+  position:absolute;inset:0;
+  border-radius:32px;overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:6px solid var(--paper);
+}
+.hero-visual .frame img{
+  width:100%;height:100%;object-fit:cover;
+  animation:zoom 18s ease-out forwards;
+}
+@keyframes zoom{from{transform:scale(1.14)}to{transform:scale(1)}}
+.hero-visual .badge{
+  position:absolute;top:20px;right:-14px;
+  background:var(--paper);border-radius:var(--radius);
+  padding:12px 18px;box-shadow:var(--shadow-md);
+  display:flex;align-items:center;gap:10px;
+  animation:floatY 4s ease-in-out infinite;
+}
+.hero-visual .badge .ico{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--sun-soft);display:grid;place-items:center;
+  font-size:1rem;
+}
+.hero-visual .badge b{
+  font-family:'DM Sans',sans-serif;font-size:.9rem;
+  color:var(--ocean-deep);display:block;line-height:1.2;
+}
+.hero-visual .badge small{font-size:.72rem;color:var(--ink-soft)}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:900px){
+  .hero{padding:96px 0 48px}
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .hero-visual{height:360px}
+  .hero-visual .badge{right:8px;top:16px}
+  .hero-stats{gap:22px}
+  .hero-stats .stat strong{font-size:1.3rem}
+}
+
+/* ---------- BOOKING BAR ---------- */
+.booking-band{
+  background:var(--ocean-deep);
+  padding:0;
+  position:relative;
+  z-index:5;
+}
+.booking-band .wrap{padding-top:0;padding-bottom:0}
+.book-card{
+  background:var(--paper);
+  border-radius:var(--radius-lg);
+  padding:20px 24px;
+  display:grid;grid-template-columns:repeat(3,1fr) auto;
+  gap:16px;align-items:end;
+  box-shadow:var(--shadow-lg);
+  transform:translateY(-50%);
+  margin-top:-1px;
+}
+.book-field label{
+  display:block;font-family:'DM Sans',sans-serif;
+  font-size:.7rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--ocean);margin-bottom:5px;
+}
+.book-field input,.book-field select{width:100%}
+input,select,textarea{
+  padding:12px 15px;border-radius:12px;
+  border:1.5px solid #ddd5c9;font:inherit;font-size:.92rem;
+  background:#fff;color:var(--ink);width:100%;
+  transition:border .2s,box-shadow .2s;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;border-color:var(--clay);
+  box-shadow:0 0 0 4px rgba(193,112,79,.15);
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 26px;border-radius:var(--radius-pill);
+  background:var(--ocean-deep);color:#fff;border:none;
+  font-family:'DM Sans',sans-serif;font-weight:700;
+  font-size:.92rem;cursor:pointer;
+  transition:all .3s cubic-bezier(.2,.8,.2,1);
+  box-shadow:0 8px 18px -6px rgba(13,43,54,.3);
+}
+.btn:hover{
+  background:var(--clay);transform:translateY(-2px);
+  box-shadow:0 14px 24px -8px rgba(193,112,79,.5);
+}
+.btn.y{background:var(--sun);color:var(--ocean-deep)}
+.btn.y:hover{background:#fff;color:var(--ocean-deep)}
+.btn.wa-b{background:#25D366;color:#083a1a;box-shadow:0 8px 18px -6px rgba(37,211,102,.4)}
+.btn.wa-b:hover{background:#1ebe5a;color:#083a1a}
+.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
+@media(max-width:760px){
+  .book-card{grid-template-columns:1fr 1fr;transform:translateY(-30%);padding:18px 20px}
+  .book-card .btn{grid-column:span 2}
+}
+@media(max-width:480px){
+  .book-card{grid-template-columns:1fr;transform:translateY(-16%);padding:18px}
+  .book-card .btn{grid-column:auto}
+}
+
+/* ---------- GALLERY — uniform grid, all same level ---------- */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+.gallery-grid figure{
+  border-radius:16px;overflow:hidden;
+  background:var(--sand-3);position:relative;
+  box-shadow:var(--shadow-xs);
+  aspect-ratio:1/1;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;
+}
+.gallery-grid figure:hover{
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:var(--shadow-md);z-index:2;
+}
+.gallery-grid figure:nth-child(1),
+.gallery-grid figure:nth-child(6){aspect-ratio:1/1;grid-column:span 2;grid-row:span 2}
+.gallery-grid img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.gallery-grid figure:hover img{transform:scale(1.06)}
+@media(max-width:860px){
+  .gallery-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+  .gallery-grid figure:nth-child(1),
+  .gallery-grid figure:nth-child(6){grid-column:span 2;grid-row:span 2}
+}
+@media(max-width:520px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .gallery-grid figure:nth-child(1),
+  .gallery-grid figure:nth-child(6){grid-column:span 2;grid-row:span 2}
+}
+
+/* ---------- VIDEOS ---------- */
+.videos-head{
+  margin:32px 0 16px;
+  display:flex;align-items:center;gap:16px;
+}
+.videos-head h3{
+  font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:800;
+  color:var(--ocean-deep);white-space:nowrap;
+}
+.videos-head .line{flex:1;height:1px;background:rgba(13,43,54,.15)}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reel{
+  aspect-ratio:9/16;border-radius:var(--radius-lg);
+  overflow:hidden;background:#000;position:relative;
+  box-shadow:var(--shadow-sm);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;
+}
+.reel:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.reel iframe{width:100%;height:100%;border:0}
+.reel.soon{
+  background:linear-gradient(160deg,var(--sun-soft),var(--sand-2));
+  display:grid;place-items:center;text-align:center;
+  padding:24px;color:var(--ocean-deep);
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;
+}
+.reel.soon span{display:block;font-weight:500;font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+@media(max-width:760px){
+  .reels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:12px;margin:0 -28px;padding-left:28px;padding-right:28px}
+  .reel{flex:0 0 74%;scroll-snap-align:start}
+}
+
+/* ---------- ROOMS ---------- */
+.rooms{display:grid;gap:16px}
+.room{
+  background:var(--paper);border-radius:var(--radius-lg);
+  display:grid;grid-template-columns:1.2fr 1fr 1fr auto;
+  gap:28px;align-items:center;
+  padding:26px 32px;
+  box-shadow:var(--shadow-xs);
+  border:1px solid rgba(13,43,54,.06);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;
+}
+.room:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.room-title h3{
+  font-size:1.4rem;font-weight:800;
+  color:var(--ocean-deep);margin-bottom:5px;
+}
+.room-title .tag{
+  display:inline-block;font-family:'DM Sans',sans-serif;
+  font-size:.68rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--clay);
+  background:rgba(193,112,79,.1);
+  padding:3px 11px;border-radius:var(--radius-pill);
+}
+.room-feats{
+  display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;
+  list-style:none;color:var(--ink-soft);font-size:.87rem;
+}
+.room-feats li{display:flex;align-items:center;gap:8px}
+.room-feats li:before{
+  content:'';width:15px;height:15px;flex-shrink:0;
+  border-radius:50%;background:var(--sun-soft);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a15a3d' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size:9px;background-position:center;background-repeat:no-repeat;
+}
+.room-price{
+  text-align:right;padding-right:6px;
+  border-left:1px solid rgba(13,43,54,.08);padding-left:28px;
+}
+.room-price .price{
+  font-size:2.1rem;font-weight:800;color:var(--clay);
+  line-height:1;letter-spacing:-.03em;
+}
+.room-price .price small{
+  font-family:'Inter',sans-serif;font-size:.78rem;
+  font-weight:500;color:var(--ink-soft);display:block;margin-top:4px;
+}
+.room .btn{white-space:nowrap}
+.room.feat{
+  background:var(--ocean-deep);color:#e8f0f3;border:none;
+  box-shadow:var(--shadow-md);
+}
+.room.feat .room-title h3{color:#fce3a8}
+.room.feat .room-title .tag{color:var(--sun);background:rgba(242,177,60,.15)}
+.room.feat .room-feats{color:#a9c5d1}
+.room.feat .room-feats li:before{background-color:rgba(242,177,60,.25);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2b13c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")}
+.room.feat .room-price{border-left-color:rgba(255,255,255,.12)}
+.room.feat .room-price .price{color:#fce3a8}
+.room.feat .room-price .price small{color:#a9c5d1}
+.room.feat .btn{background:var(--sun);color:var(--ocean-deep)}
+.room.feat .btn:hover{background:#fff}
+@media(max-width:900px){
+  .room{grid-template-columns:1fr;gap:16px;padding:24px 22px}
+  .room-price{text-align:left;border-left:none;padding-left:0;padding-right:0;border-top:1px solid rgba(13,43,54,.08);padding-top:16px}
+  .room.feat .room-price{border-top-color:rgba(255,255,255,.12)}
+}
+.extras{
+  margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;
+}
+.extras span{
+  background:var(--paper);border:1px solid rgba(13,43,54,.08);
+  border-radius:var(--radius-pill);padding:8px 18px;
+  font-size:.85rem;font-weight:500;color:var(--ocean);
+  box-shadow:var(--shadow-xs);
+  transition:transform .3s,box-shadow .3s;
+}
+.extras span:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+
+/* ---------- LOCATION — tighter ---------- */
+.loc{
+  display:grid;grid-template-columns:.85fr 1.15fr;
+  gap:36px;align-items:stretch;
+}
+.loc-info{
+  display:flex;flex-direction:column;justify-content:center;
+}
+.loc-info address{
+  font-style:normal;font-size:1.05rem;line-height:1.6;
+  color:#a9c5d1;margin:14px 0 22px;
+}
+.loc-info address strong{
+  color:#fce3a8;font-family:'DM Sans',sans-serif;
+  font-weight:700;display:block;font-size:1.2rem;margin-bottom:4px;
+}
+.loc-map{
+  min-height:320px;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:5px solid var(--paper);
+}
+.loc-map iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:860px){
+  .loc{grid-template-columns:1fr;gap:24px}
+  .loc-map{min-height:280px}
+}
+
+/* ---------- CONTACT ---------- */
+.two{
+  display:grid;grid-template-columns:1.4fr 1fr;
+  gap:24px;align-items:start;
+}
+.card{
+  background:var(--paper);border-radius:var(--radius-lg);
+  padding:32px 30px;box-shadow:var(--shadow-sm);
+  border:1px solid rgba(13,43,54,.06);
+}
+.card.black{
+  background:var(--ocean-deep);color:#e8f0f3;border:none;
+  box-shadow:var(--shadow-lg);
+}
+.card.black h2{color:#fce3a8;font-size:1.4rem;font-weight:800}
+.card.black p{color:#a9c5d1;font-size:.9rem;margin:6px 0 0}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field label{
+  display:block;font-family:'DM Sans',sans-serif;
+  font-size:.72rem;font-weight:700;color:var(--ocean);
+  margin-bottom:5px;letter-spacing:.06em;text-transform:uppercase;
+}
+.est{
+  background:linear-gradient(135deg,var(--sun-soft),#fff4d9);
+  border-radius:14px;padding:14px 18px;
+  font-family:'DM Sans',sans-serif;font-weight:700;
+  color:var(--ocean-deep);min-height:52px;
+  display:flex;align-items:center;gap:12px;
+  border-left:4px solid var(--sun);
+  font-size:.92rem;
+}
+.est:before{content:'';font-size:1.1rem}
+#status{
+  font-weight:600;min-height:1.5em;
+  color:var(--ocean);font-size:.92rem;
+}
+#status.ok{color:#1f8a4c}
+#status.err{color:#c0392b}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+dl{
+  display:grid;grid-template-columns:auto 1fr;
+  gap:12px 22px;margin-top:20px;font-size:.94rem;
+}
+dt{
+  font-family:'DM Sans',sans-serif;font-weight:700;
+  color:var(--sun);font-size:.78rem;text-transform:uppercase;
+  letter-spacing:.05em;padding-top:2px;
+}
+dd{margin:0;font-weight:500;color:#e8f0f3}
+@media(max-width:860px){
+  .two{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .card{padding:28px 22px}
+}
+
+footer{
+  background:var(--ocean-deep);color:#7fa0ad;
+  text-align:center;padding:26px 24px;font-size:.85rem;
+  border-top:1px solid rgba(255,255,255,.06);
+  letter-spacing:.01em;
+}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.wa{
+  position:fixed;right:24px;bottom:24px;z-index:200;
+  display:flex;align-items:center;gap:10px;
+  background:#25D366;color:#083a1a;
+  padding:12px 20px;border-radius:var(--radius-pill);
+  font-family:'DM Sans',sans-serif;font-weight:700;font-size:.9rem;
+  box-shadow:0 14px 30px -8px rgba(37,211,102,.55);
+  transition:all .3s cubic-bezier(.2,.8,.2,1);
+  animation:waPulse 3s ease-in-out infinite;
+}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 14px 30px -8px rgba(37,211,102,.55)}
+  50%{box-shadow:0 14px 40px -6px rgba(37,211,102,.85)}
+}
+.wa:hover{
+  transform:translateY(-4px) scale(1.02);
+  background:#1ebe5a;animation:none;
+}
+.wa svg{width:22px;height:22px;fill:#083a1a}
+@media(max-width:500px){.wa span{display:none}.wa{padding:12px}}
+
+/* ---------- REVEAL ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv-scale{opacity:0;transform:scale(.95);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv-scale.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:6px}
+.bg-ocean :focus-visible{outline-color:var(--sun)}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv,.rv-scale,.hero h1 .line span,.hero p.sub,.hero-stats,.eyebrow,.hero-visual,.book-card{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#home" class="logo"><span class="mark">R</span>Rehema Sands</a>
+    <button id="burger" aria-label="Menu">☰</button>
+    <ul id="menu">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#rooms">Rooms &amp; prices</a></li>
+      <li><a href="#location">Find us</a></li>
+      <li><a href="#payment">Payment</a></li>
+      <li><a href="#contact" class="cta">Book now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-left">
+      
+      <h1>
+        <span class="line"><span>Holidays</span></span>
+        <span class="line"><span><em>Hotel.</em></span></span>
+      </h1>
+      <p class="sub">A sun-washed hideaway on Windermere Road, Gqeberha. Slow mornings, warm hospitality, and the ocean breeze.</p>
+      <div class="hero-stats">
+        <div class="stat"><strong>2</strong><span>Room types</span></div>
+        <div class="stat"><strong>24/7</strong><span>Security</span></div>
+        <div class="stat"><strong>Free</strong><span>Parking &amp; Braai</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame"><img id="heroImg" alt="Rehema Sands accommodation"></div>
+      <div class="badge">
+        <div class="ico">✓</div>
+        <div>
+          <b>Direct booking</b>
+          <small>No middleman fees</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="booking-band">
+  <div class="wrap">
+    <div class="book-card">
+      <div class="book-field"><label for="h-in">Check-in</label><input type="date" id="h-in"></div>
+      <div class="book-field"><label for="h-out">Check-out</label><input type="date" id="h-out"></div>
+      <div class="book-field"><label for="h-g">Guests</label><select id="h-g"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+      <button class="btn" id="h-go">Check dates</button>
+    </div>
+  </div>
+</div>
+
+<section id="gallery" class="bg-sand-2">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <h2>Take a look inside</h2>
+        <p>Our rooms, surroundings, plus a short video tour.</p>
+      </div>
+      <span class="chip">Gallery</span>
+    </div>
+    <div class="gallery-grid rv" id="photos"></div>
+    <div class="videos-head rv"><h3>Watch our videos</h3><span class="line"></span></div>
+    <div class="reels rv" id="reels"></div>
+  </div>
+</section>
+
+<section class="bg-sand" id="rooms">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <h2>Rooms &amp; prices</h2>
+        <p>Two simple packages with honest nightly rates in rand — everything included.</p>
+      </div>
+      <span class="chip">From R700</span>
+    </div>
+    <div class="rooms">
+      <div class="room rv">
+        <div class="room-title">
+          <span class="tag">Popular</span>
+          <h3>Standard Room</h3>
+        </div>
+        <ul class="room-feats">
+          <li>Queen bed</li>
+          <li>Private bathroom</li>
+          <li>Free Wi-Fi</li>
+          <li>Sleeps 2</li>
+        </ul>
+        <div class="room-price">
+          <div class="price">R700<small>per night</small></div>
+        </div>
+        <a href="#contact" class="btn" data-room="Standard Room">Choose</a>
+      </div>
+      <div class="room feat rv">
+        <div class="room-title">
+          <span class="tag">Best value</span>
+          <h3>Family Suite</h3>
+        </div>
+        <ul class="room-feats">
+          <li>Sleeps 4</li>
+          <li>Full kitchen</li>
+          <li>Lounge area</li>
+          <li>Free Wi-Fi</li>
+        </ul>
+        <div class="room-price">
+          <div class="price">R1400<small>per night</small></div>
+        </div>
+        <a href="#contact" class="btn" data-room="Family Suite">Choose</a>
+      </div>
+    </div>
+    <div class="extras rv">
+      <span>Security: 24/7</span>
+      <span>Laundry: Fee</span>
+      <span>Parking: Free</span>
+      <span>Braai Area: Free</span>
+    </div>
+  </div>
+</section>
+
+<section class="bg-ocean" id="location">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <h2>Find us</h2>
+        <p>Quiet street, easy access to beaches, malls and the airport.</p>
+      </div>
+      <span class="chip">Gqeberha</span>
+    </div>
+    <div class="loc">
+      <div class="loc-info rv">
+        <address>
+          <strong>Rehema Sands</strong>
+          43 Windermere Road<br>
+          Port Elizabeth (Gqeberha)<br>
+          South Africa
+        </address>
+        <a class="btn y" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=43+Windermere+Road,+Port+Elizabeth,+South+Africa">Get directions</a>
+      </div>
+      <div class="loc-map rv-scale">
+        <iframe title="Map to Rehema Sands" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=43+Windermere+Road,+Port+Elizabeth,+South+Africa&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-sand" id="contact">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <h2>Book your stay</h2>
+        <p>Send us your dates — the request goes straight to the manager, or reach us on WhatsApp.</p>
+      </div>
+      <span class="chip">Enquire</span>
+    </div>
+    <div class="two">
+      <div class="card rv">
+        <form id="mail" novalidate>
+          <input name="name" placeholder="Your name" required aria-label="Your name">
+          <div class="row">
+            <input name="email" type="email" placeholder="Your email" required aria-label="Email">
+            <input name="phone" placeholder="Phone" aria-label="Phone">
+          </div>
+          <div class="row">
+            <div class="field"><label for="f-in">Check-in</label><input type="date" id="f-in" name="check_in" required></div>
+            <div class="field"><label for="f-out">Check-out</label><input type="date" id="f-out" name="check_out" required></div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="f-room">Room</label>
+              <select id="f-room" name="room">
+                <option value="Standard Room" data-p="700">Standard Room (R700)</option>
+                <option value="Family Suite" data-p="1400">Family Suite (R1400)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-g">Guests</label>
+              <select id="f-g" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
+            </div>
+          </div>
+          <div class="est" id="est">Choose your dates to see an estimate.</div>
+          <textarea name="message" rows="3" placeholder="Anything else we should know?" aria-label="Message"></textarea>
+          <div class="btns">
+            <button class="btn" type="submit" id="sendBtn">Send by email</button>
+            <button class="btn wa-b" type="button" id="waForm">Send on WhatsApp</button>
+          </div>
+          <div id="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+      <div class="card black rv" id="payment">
+        <h2>Banking details</h2>
+        <p>Pay your deposit by bank transfer and send us the proof of payment.</p>
+        <dl>
+          <dt>Account name</dt><dd>Rehema Sands Accommodation</dd>
+          <dt>Bank</dt><dd>Bank Name</dd>
+          <dt>Account no.</dt><dd>0000 0000 000</dd>
+          <dt>Branch code</dt><dd>000000</dd>
+          <dt>Reference</dt><dd>Your name + check-in date</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; <span id="yr"></span> Rehema Sands Accommodation, 43 Windermere Road, Port Elizabeth.</footer>
+
+<a class="wa" id="wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.8 1.2 1.2-3.7-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.4 3.4c.2.2 2.4 3.7 5.8 5.1 2.1.9 3 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.7 2.7 0 0 0 .2-1.6c-.1-.2-.3-.2-.6-.4z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+
+<script>
+const CONFIG = {
+  whatsappNumber: "27711418933",
+  whatsappText: "Hello Rehema Sands, I would like to make a booking.",
+  videos: ["AsUqHZeZeac","ERPML503C0A","97PxNxWVh3Q"],
+  emailjs: {
+    publicKey: "9SikuExC5PWpcSFE2",
+    serviceId: "service_055e1om",
+    templateId: "template_zpgv6ji"
+  },
+  photos: [
+    "images/photo1.jpg","images/photo2.jpg","images/photo3.jpg","images/photo4.jpg","images/photo5.jpg",
+    "images/photo6.jpg","images/photo7.jpg","images/photo8.jpg","images/photo9.jpg"
+  ]
+};
+
+const $=s=>document.querySelector(s);
+$("#yr").textContent=new Date().getFullYear();
+$("#burger").onclick=()=>$("#menu").classList.toggle("open");
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>$("#menu").classList.remove("open"));
+$("#wa").href="https://wa.me/"+CONFIG.whatsappNumber+"?text="+encodeURIComponent(CONFIG.whatsappText);
+$("#heroImg").src=CONFIG.photos[0];
+$("#photos").innerHTML=CONFIG.photos.map((u,i)=>`<figure><img src="${u}" alt="Rehema Sands photo ${i+1}" loading="lazy" onerror="this.parentElement.remove()"></figure>`).join("");
+
+const reels=$("#reels");
+reels.innerHTML=CONFIG.videos.map(id=>/^PASTE/.test(id)
+  ?`<div class="reel soon">Video coming soon<span>Check back later</span></div>`
+  :`<div class="reel"><iframe data-id="${id}" title="Rehema Sands video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`).join("");
+new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){
+  reels.querySelectorAll("iframe").forEach(f=>{const id=f.dataset.id;
+    f.src=`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&rel=0&playsinline=1`});
+  o.disconnect();}
+},{threshold:.2}).observe(reels);
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv,.rv-scale").forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+"ms";io.observe(el)});
+
+const iso=d=>d.toISOString().slice(0,10);
+const today=iso(new Date());
+const pairs=[["#h-in","#h-out"],["#f-in","#f-out"]];
+pairs.forEach(([a,b])=>{
+  const ai=$(a),bi=$(b);if(!ai||!bi)return;
+  ai.min=today;bi.min=today;
+  ai.onchange=()=>{
+    const next=new Date(ai.value);next.setDate(next.getDate()+1);
+    bi.min=iso(next);if(bi.value&&bi.value<=ai.value)bi.value="";
+    sync(ai);estimate();
+  };
+  bi.onchange=()=>{sync(bi);estimate()};
+});
+function sync(el){
+  const map={"h-in":"f-in","h-out":"f-out","f-in":"h-in","f-out":"h-out"};
+  const o=$("#"+map[el.id]);
+  if(o){
+    if(o.id.endsWith("out")){
+      o.min=$("#"+(o.id[0]+"-in")).value
+        ? iso(new Date(new Date($("#"+(o.id[0]+"-in")).value).getTime()+864e5))
+        : today;
+    }
+    o.value=el.value;
+  }
+}
+$("#h-g").onchange=e=>$("#f-g").value=e.target.value;
+$("#h-go").onclick=()=>{estimate();$("#contact").scrollIntoView()};
+document.querySelectorAll("[data-room]").forEach(b=>b.onclick=()=>{$("#f-room").value=b.dataset.room;estimate()});
+$("#f-room").onchange=estimate;
+
+function nights(){const a=$("#f-in").value,b=$("#f-out").value;return a&&b?Math.round((new Date(b)-new Date(a))/864e5):0}
+function estimate(){
+  const n=nights(),p=+$("#f-room").selectedOptions[0].dataset.p;
+  $("#est").textContent=n>0
+    ?`${n} night${n>1?"s":""} × R${p} = R${n*p} total estimate`
+    :"Choose your dates to see an estimate.";
+}
+
+const sendBtn=$("#sendBtn");
+$("#mail").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const s=$("#status");s.className="";
+  if(nights()<1){s.textContent="Check-out must be after check-in.";s.className="err";return}
+  const fd=new FormData(e.target);
+  if(!fd.get("name")||!fd.get("email")){s.textContent="Please fill in your name and email.";s.className="err";return}
+
+  sendBtn.disabled=true;
+  const orig=sendBtn.textContent;
+  sendBtn.textContent="Sending…";
+  s.textContent="";
+
+  try{
+    const params=Object.fromEntries(fd);
+    params.estimate=$("#est").textContent;
+    const k=CONFIG.emailjs;
+    const r=await fetch("https://api.emailjs.com/api/v1.0/email/send",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({service_id:k.serviceId,template_id:k.templateId,user_id:k.publicKey,template_params:params})
+    });
+    if(!r.ok){const txt=await r.text().catch(()=>"");throw new Error(txt||"Email service error.")}
+    s.textContent="Request sent — we'll reply soon.";
+    s.className="ok";
+    e.target.reset();estimate();
+  }catch(err){
+    console.error(err);
+    s.textContent="Could not send email. Please try WhatsApp instead.";
+    s.className="err";
+  }finally{
+    sendBtn.disabled=false;
+    sendBtn.textContent=orig;
+  }
+});
+
+$("#waForm").onclick=()=>{
+  const f=new FormData($("#mail"));
+  const t=`Hello Rehema Sands, I would like to book.\nName: ${f.get("name")||"-"}\nRoom: ${f.get("room")}\nCheck-in: ${f.get("check_in")||"-"}\nCheck-out: ${f.get("check_out")||"-"}\nGuests: ${f.get("guests")}\n${$("#est").textContent}`;
+  window.open("https://wa.me/"+CONFIG.whatsappNumber+"?text="+encodeURIComponent(t),"_blank");
+};
+</script>
+</body>
+</html>
